@@ -7,5 +7,12 @@ class App {
     }
 
     fun run() {
+        initHeader()
+    }
+
+    private fun initHeader() {
+        println("=======================================")
+        println("GUNTING BATU KERTAS (GBK)")
+        println("=======================================")
     }
 }
