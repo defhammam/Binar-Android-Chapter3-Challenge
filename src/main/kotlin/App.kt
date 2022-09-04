@@ -13,12 +13,17 @@ class App {
 
     fun run() {
         initHeader()
+        play()
     }
 
     private fun initHeader() {
         println("=======================================")
         println("GUNTING BATU KERTAS (GBK)")
         println("=======================================")
+    }
+
+    private fun play() {
+        DoYouWantTo().useCustomName(bothPlayers)
     }
 
     private fun scanInput(message: String): String {
