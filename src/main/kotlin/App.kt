@@ -38,6 +38,9 @@ class App {
         bothPlayers[0].hand = scanInput("Pilihan ${bothPlayers[0].name}: ")
         print("Pilihan ${bothPlayers[1].name}: ")
         bothPlayers[1].hand = scanInput("Pilihan ${bothPlayers[1].name}: ")
+
+        println("\n${fight(bothPlayers)}")
+        println("=======================================\n")
     }
 
     private fun scanInput(message: String): String {
