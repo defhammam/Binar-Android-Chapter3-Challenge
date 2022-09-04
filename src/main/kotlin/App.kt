@@ -7,7 +7,11 @@ class App {
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
-            App().run()
+            var iDo = true
+            while (iDo) {
+                App().run()
+                iDo = DoYouWantTo().playAgain()
+            }
         }
     }
 
