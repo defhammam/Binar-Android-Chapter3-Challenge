@@ -11,7 +11,7 @@ object IOUtils {
     }
 
     fun ohYesOhNo(): Boolean {
-        val choice: Int = readLine()?.toInt() ?: 0
+        val choice: Int = ValidateInput().validateInt()
         return choice == 1
     }
 }

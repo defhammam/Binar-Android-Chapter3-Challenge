@@ -6,6 +6,6 @@ class ValidateInput: Validation() {
     }
 
     override fun validateInt(): Int {
-        TODO("Not yet implemented")
+        return readLine()?.toInt() ?: 0
     }
 }
