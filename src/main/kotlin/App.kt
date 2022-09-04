@@ -1,7 +1,8 @@
 import model.Player
 import utils.IOUtils
+import utils.Publish
 
-class App {
+class App: Publish {
     private val bothPlayers = arrayListOf<Player>()
 
     companion object {
@@ -44,7 +45,7 @@ class App {
         bothPlayers[1].hand = scanInput("Pilihan ${bothPlayers[1].name}: ")
 
         println("\n${fight(bothPlayers)}")
-        println("=======================================\n")
+        printFooter("=======================================\n")
     }
 
     private fun scanInput(message: String): String {
@@ -70,5 +71,9 @@ class App {
             playerTwoWins -> "Hasil:\n${listOfPlayers[1].name} MENANG! 🎊"
             else -> "Hasil:\nSERI!!!1!1!1! 😱"
         }
+    }
+
+    override fun printFooter(line: String): Unit {
+        println(line)
     }
 }
