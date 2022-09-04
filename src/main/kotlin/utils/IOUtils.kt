@@ -9,4 +9,9 @@ object IOUtils {
         else
             null
     }
+
+    fun ohYesOhNo(): Boolean {
+        val choice: Int = readLine()?.toInt() ?: 0
+        return choice == 1
+    }
 }
