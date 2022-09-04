@@ -24,6 +24,20 @@ class App {
 
     private fun play() {
         DoYouWantTo().useCustomName(bothPlayers)
+
+        print("""
+            =======================================
+            Silakan ketik salah satu pilihan
+            (Gunting / Batu / Kertas) untuk
+            setiap pemain.
+            =======================================
+            
+            
+        """.trimIndent())
+        print("Pilihan ${bothPlayers[0].name}: ")
+        bothPlayers[0].hand = scanInput("Pilihan ${bothPlayers[0].name}: ")
+        print("Pilihan ${bothPlayers[1].name}: ")
+        bothPlayers[1].hand = scanInput("Pilihan ${bothPlayers[1].name}: ")
     }
 
     private fun scanInput(message: String): String {
