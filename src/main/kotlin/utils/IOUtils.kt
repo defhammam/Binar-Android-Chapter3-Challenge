@@ -2,8 +2,8 @@ package utils
 import model.Player
 
 object IOUtils {
-    fun getHand(default: String = ""): String? {
-        val choice: String = readLine()?.lowercase() ?: default
+    fun getHand(): String? {
+        val choice: String = ValidateInput().validateString()
         return if (Player().possibleChoices.contains(choice))
             choice
         else
@@ -11,7 +11,7 @@ object IOUtils {
     }
 
     fun ohYesOhNo(): Boolean {
-        val choice: Int = readLine()?.toInt() ?: 0
+        val choice: Int = ValidateInput().validateInt()
         return choice == 1
     }
 }
