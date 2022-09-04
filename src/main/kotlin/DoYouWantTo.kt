@@ -18,4 +18,9 @@ class DoYouWantTo {
         }
         return listOfPlayers
     }
+
+    fun playAgain(): Boolean {
+        print("$begin bermain lagi?$end")
+        return IOUtils.ohYesOhNo()
+    }
 }
